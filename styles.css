@@ -1,0 +1,574 @@
+/*UNIVERSAL STYLES*/
+
+* {
+	box-sizing: border-box;
+}
+html, body {
+	min-height: 100%;
+	background: #fff;
+	color: #000;
+}
+	/* sets the body height of the browser, so that backgrounds and div heights work correctly. Color and background will almost certainly be altered; they are just placeholders */
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.4rem;
+	text-rendering: optimizeLegibility;
+	margin: 2%;
+}
+
+article, aside, audio,
+footer, header, nav, section, video {
+	display: block;
+	}
+
+	/* ensures that older browsers will display HTML5 elements correctly */
+
+h1, h2, h3, h4 {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1.5em;
+}
+
+img {
+	border: none;
+	max-width: 100%;
+}
+	/* removes outlines from linked images (for older browsers and IE), sets up images for responsive design layout */
+
+.section-title {
+	text-align: center;
+	font-size: 3rem;
+	padding-top: 1.5rem;
+}
+
+
+/*HEADER*/
+
+header {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	height: 100%;
+}
+
+.header {
+	width: 100%;
+	text-align: center;
+	font-size: 3.5em;
+	margin: 0;
+	;
+}
+.header2 {
+	width: 120%;
+	text-align: center;
+	font-size: 2.5em;
+	margin: 0;
+	;
+}
+.logo {
+	width: 15%;
+	justify-content: center;
+}
+
+.navbar {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	background-color: #00302a;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border: solid 2px #000000;
+}
+
+a {
+	text-decoration: none;
+	width: 100%;
+	font-weight: 700;
+	outline: none;
+	text-align: center;
+	line-height: 3;
+	color: #000000;
+	transition-duration: 0.4s;
+}
+
+a:link,
+a:visited,
+a:focus {
+	color: #ffffff;
+}
+
+a:hover {
+	background: #005449;
+}
+
+a:active {
+	background: #005449;
+	outline-style: dotted;
+	outline-color: #001F1B;
+	outline-offset: -4px;
+	transition-duration: 0s;
+}
+
+a.left-nav-button:hover,
+a.left-nav-button:active,
+a.left-nav-button:visited {
+	border-top-left-radius: 20px;
+}
+
+a.right-nav-button:hover,
+a.right-nav-button:active
+a.left-nav-button:visited {
+	border-top-right-radius: 20px;
+}
+
+.active-page {
+	background: #005449;
+	border-top-left-radius: 20px;
+}
+
+
+/*HERO SECTION*/
+
+.hero {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero::before {
+	content: "";
+
+	background-size: cover;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	opacity: 0.7;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+     border: solid 2px #000000;
+     border-top: none;
+}
+
+.hero-description {
+	position: relative;
+	color: #000000;
+	font-size: 1534rem;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.hero-description h2 {
+	font-family: 'Pacifico', cursive;
+	font-weight: 200;
+	font-size: 5rem;
+}
+
+
+/*ABOUT*/
+
+.about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.owner-image {
+	width: 250px;
+	border-radius: 50%;
+	border: solid 2px #000000;
+	margin-bottom: 0px;
+}
+
+.about-description {
+	margin: 40px 0;
+	font-size: 1.6rem;
+	width: 60%;
+}
+
+.about-images {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.about-images a {
+	text-decoration: none;
+	width: auto;
+	font-weight: normal;
+	outline: none;
+	text-align: center;
+	line-height: 1;
+	color: #000000;
+	transition-duration: 0.4s;
+}
+
+.about-images a:link,
+.about-images a:visited,
+.about-images a:focus {
+	color: #000000;
+}
+
+.about-images a:hover {
+	background: #ffffff;
+	transform: translate(0, -5%);
+}
+
+.about-images-item {
+	margin: 2%;
+	color: #00302A;
+}
+
+.about-image {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	border: solid 2px #000000;
+}
+
+.about-image:hover {
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/*SHOP ITEMS*/
+
+.shop-items {
+	background: #005449;
+	color: #ffffff;
+	margin-top: 5%;
+	border-radius: 20px;
+}
+
+.furniture {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.candles {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.lighting {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.items-title {
+	width: 100%;
+	text-align: center;
+	font-size: 1.7em;
+}
+
+.item {
+	width: 400px;
+	margin: 0 5% 3% 5%;
+}
+
+.item img {
+	width: 400px;
+	height: 400px;
+	border-radius: 20px;
+	border: solid 2px #000000;
+}
+
+.price {
+	font-weight: 600;
+}
+
+
+/*LOCATION*/
+
+.google-map {
+     padding-bottom: 50%;
+     position: relative;
+     border-radius: 20px;
+     border: solid 2px #000000;
+}
+
+.google-map iframe {
+     height: 100%;
+     width: 100%;
+     left: 0;
+     top: 0;
+     position: absolute;
+     border-radius: 20px;
+}
+
+
+/*CONTACT*/
+
+.contact {
+	background-color: #00302A;
+	color: #ffffff;
+	text-align: center;
+	border-radius: 20px;
+}
+
+.contact a:active,
+.contact a:hover {
+	padding: 0.5em;
+	border-radius: 20px;
+}
+
+.footer {
+	padding-top: 2em;
+	padding-bottom: 1.5rem;
+}
+
+
+/*MEDIA QUERIES*/
+
+/*Small (Mobile) Screens (480px & smaller)*/
+@media screen and (max-width: 480px) {
+
+	.header {
+		font-size: 1.9em;
+	}
+
+	.logo {
+		width: 20%;
+	}
+
+	.navbar {
+		flex-direction: column;
+	}
+
+	.hero {
+		height: 50vh;
+	}
+
+	.hero-description {
+		font-size: 1.4rem;
+	}
+
+	.hero-description h2 {
+		font-size: 2.5rem;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+	}
+
+	.owner-image {
+		width: 150px;
+	}
+
+	.about-description {
+		width: 100%;
+		margin: 20px 0;
+	}
+
+	.about p {
+		font-size: 0.8em;
+	}
+
+	.about-images {
+		flex-direction: column;
+	}
+
+	.about-images-item h3 {
+		font-size: 1.2em;
+	}
+
+	.about-image {
+		width: 200px;
+		height: 200px;
+	}
+
+	.items-title {
+		font-size: 1.3em;
+	}
+
+	.mobile-span {
+		display: inline-flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.mobile-span.item-description {
+		width: 60%;
+	}
+
+	div.mobile-span {
+		font-size: 0.8em;
+		margin: 0 0 5% 0;
+	}
+
+	div.price {
+		margin-left: 5%;
+	}
+
+	.item {
+		margin-bottom: 5%;
+		width: 350px;
+	}
+
+	.item img {
+		width: 350px;
+		height: 350px;
+	}
+
+	.contact a {
+		font-size: 1.3rem;
+	}
+}
+
+
+/*Medium (Tablet) Screens (480px to 768px)*/
+@media screen and (min-width: 480px) and (max-width: 768px) {
+
+	.header {
+		font-size: 2.5em;
+	}
+
+	.logo {
+		width: 25%;
+	}
+
+	.hero {
+		height: 70vh;
+	}
+
+	.navbar {
+		flex-direction: column;
+	}
+
+	.hero-description {
+		font-size: 1.4rem;
+	}
+
+	.hero-description h2 {
+		font-size: 2.5rem;
+	}
+
+	.owner-image {
+		width: 175px;
+	}
+
+	.about-description {
+		width: 100%;
+	}
+
+	.about p {
+		font-size: 0.9em;
+	}
+
+	.about-images {
+		flex-direction: column;
+	}
+
+	.about-images-item h3 {
+		font-size: 1.4em;
+	}
+
+	.about-image {
+		width: 250px;
+		height: 250px;
+	}
+
+	.section-title {
+		font-size: 2.6rem;
+	}
+
+	.items-title {
+		font-size: 1.5em;
+	}
+
+	.mobile-span {
+		display: inline-flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.mobile-span.item-description {
+		width: 60%;
+	}
+
+	div.mobile-span {
+		font-size: 0.8em;
+		margin: 0 0 5% 0;
+	}
+
+	div.price {
+		margin-left: 5%;
+	}
+
+	.item {
+		margin-bottom: 5%;
+		width: 294px;
+	}
+
+	.item img {
+		width: 294px;
+		height: 294px;
+	}
+
+	.contact a {
+		font-size: 1.2rem;
+	}
+	* {
+	  margin: 0px;
+	  padding: 0px;
+	}
+
+	form, .content {
+	  width: 30%;
+	  margin: 0px auto;
+	  padding: 20px;
+	  border: 1px solid #B0C4DE;
+	  background: white;
+	  border-radius: 0px 0px 10px 10px;
+	}
+	.input-group {
+	  margin: 10px 0px 10px 0px;
+	}
+	.input-group label {
+	  display: block;
+	  text-align: left;
+	  margin: 3px;
+	}
+	.input-group input {
+	  height: 30px;
+	  width: 93%;
+	  padding: 5px 10px;
+	  font-size: 16px;
+	  border-radius: 5px;
+	  border: 1px solid gray;
+	}
+	.btn {
+	  padding: 10px;
+	  font-size: 15px;
+	  color: white;
+	  background: #5F9EA0;
+	  border: none;
+	  border-radius: 5px;
+	}
+	.error {
+	  width: 92%;
+	  margin: 0px auto;
+	  padding: 10px;
+	  border: 1px solid #a94442;
+	  color: #a94442;
+	  background: #f2dede;
+	  border-radius: 5px;
+	  text-align: left;
+	}
+	.success {
+	  color: #3c763d;
+	  background: #dff0d8;
+	  border: 1px solid #3c763d;
+	  margin-bottom: 20px;
+	}
+
+}
